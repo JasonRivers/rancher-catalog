@@ -1,9 +1,8 @@
----
 name: MiServer
-description: >
+description: |
   MiServer deployment.
 version: 3.x
 category: Dyalog
 maintainer: Jason Rivers <docker@jasonrivers.co.uk>
-licence: MIT
+licence: 
 projectURL: https://github.com/Dyalog/miserver

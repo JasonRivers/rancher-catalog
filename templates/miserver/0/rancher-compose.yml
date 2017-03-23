@@ -1,3 +1,9 @@
+.catalog:
+  name: "MiServer"
+  version: "3.x"
+  description: "MiServer website"
+  uuid: miserver-0
+
 services:
   web:
     scale: 1

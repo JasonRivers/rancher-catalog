@@ -1,0 +1,8 @@
+name: APL Tutor
+description: |
+  APL Tutor.
+version: 1.x
+category: Dyalog
+maintainer: Jason Rivers <docker@jasonrivers.co.uk>
+licence: 
+projectURL: https://github.com/Dyalog/miserver

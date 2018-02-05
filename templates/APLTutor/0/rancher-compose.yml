@@ -1,0 +1,11 @@
+.catalog:
+  name: "APLTutor"
+  version: "1.x"
+  description: "tutorial website"
+  uuid: apltutor-0
+
+services:
+  web:
+    scale: 1
+    start_on_create: true
+

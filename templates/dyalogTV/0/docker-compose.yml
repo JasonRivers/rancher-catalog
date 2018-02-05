@@ -1,0 +1,36 @@
+version: '2'
+services:
+  nginx-wss-proxy:
+    image: registry.dyalog.com:5000/jason/nginx-wss-proxy:latest
+    stdin_open: true
+    volumes:
+    - /DockerVolumes/nginx-wss-proxy:/certs
+    tty: true
+    ports:
+    - 8443:8443/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  web:
+    image: registry.dyalog.com:5000/dyalog/videosite:latest
+    stdin_open: true
+    tty: true
+    ports:
+    - 8080:80/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  rtmp-server:
+    image: jasonrivers/nginx-rtmp
+    stdin_open: true
+    tty: true
+    ports:
+    - 1935:1935/tcp
+    labels:
+      io.rancher.container.pull_image: always
+  websocket-chat-server:
+    image: registry.dyalog.com:5000/jason/chat-server:latest
+    stdin_open: true
+    tty: true
+    ports:
+    - 9000:9000/tcp
+    labels:
+      io.rancher.container.pull_image: always

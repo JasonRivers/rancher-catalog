@@ -1,0 +1,19 @@
+.catalog:
+  name: "DyalogTV"
+  version: "1.x"
+  description: "DyalogTV website"
+  uuid: dyalogTV-0
+
+services:
+  nginx-wss-proxy:
+    scale: 1
+    start_on_create: true
+  web:
+    scale: 1
+    start_on_create: true
+  rtmp-server:
+    scale: 1
+    start_on_create: true
+  websocket-chat-server:
+    scale: 1
+    start_on_create: true
